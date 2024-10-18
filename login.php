@@ -93,7 +93,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <script>
     function show() {
-        var notification = document.getElementsByClassName('notification')[0]; // Přístup k prvnímu elementu
+        var notification = document.getElementsByClassName('notification')[0]; // Přístup k prvnímu elementua
         notification.style.display = 'block'; // Zajistíme, že element je viditelný
         notification.style.opacity = '1'; // Změníme opacity na 1 pro zobrazení
     }

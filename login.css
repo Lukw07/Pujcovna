@@ -126,7 +126,7 @@ button:hover {
 .notification {
     position: absolute;
     top: 10px;
-    right: -350px; /* Notifikace začíná mimo obrazovku */
+    right: -350px; /* Notifikace začíná mimo obrazovkua */
     width: 300px;
     padding: 15px;
     border-radius: 5px;

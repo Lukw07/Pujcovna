@@ -20,7 +20,7 @@ while ($row = $result->fetch_assoc()) {
 }
 
 // Získejte maximální dostupnost
-$maxQuantity = 5; // Změňte podle vaší logiky
+$maxQuantity = 5; // Změňte podle vaší logikya
 
 // Vytvořte odpověď
 $response = [

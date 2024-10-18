@@ -235,7 +235,7 @@ function getDateForDay($dayIndex) {
             document.getElementById('availability').innerHTML = '<p>Chyba při načítání dostupnosti.</p>';
         };
         xhr.send();
-    }, 10000);  // každých 10s(10000 ms)
+    }, 10000);  // každých 10s(10000m)
 });
 
 document.getElementById('item').addEventListener('change', function() {

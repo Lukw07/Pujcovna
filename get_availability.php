@@ -96,7 +96,7 @@ if (isset($_GET['item_id'])) {
             } elseif ($availableQuantity > $totalItems * 0.25) {
                 $class = "partial";  // Oranžová
             } else {
-                $class = "unavailable";  // Červená
+                $class = "unavailable";  // Červenáa
             }
 
             echo "<td class='$class' data-hour-id='" . htmlspecialchars($hour['id']) . "'>" . htmlspecialchars($availableQuantity) . "</td>";
