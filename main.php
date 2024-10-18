@@ -48,7 +48,7 @@ $itemsResult = $conn->query($itemsSql);
 
 // Zkontroluj, zda dotaz vrátil výsledky
 if (!$itemsResult) {
-    die("Chyba dotazu na položky: " . $conn->error);
+    die("Chyba dotazu na položku: " . $conn->error);
 }
 
 // Funkce pro získání data pro aktuální týdenní den (Po-Pá)
@@ -192,7 +192,7 @@ function getDateForDay($dayIndex) {
     setInterval(function() {
         console.log("1");
         var xhr = new XMLHttpRequest();
-        var itemId = document.getElementById('item').value; // Ensure itemId is updated within the interval
+        var itemId = document.getElementById('item').value; 
         xhr.open('GET', 'get_availability.php?item_id=' + itemId, true);
         xhr.onload = function() {
             if (xhr.status === 200) {
