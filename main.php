@@ -180,7 +180,7 @@ function getDateForDay($dayIndex) {
 
     <h2>Dostupnost</h2>
     <div id="availability">
-        <!-- Sem se bude načítat tabulka dostupnosti pomocí AJAXu ->
+        <!-- Sem se bude načítat tabulka dostupnosti pomocí AJAXu -->
     </div>
 </div>
 
