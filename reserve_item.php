@@ -54,7 +54,7 @@ if ($available_quantity < $quantity) {
     exit();
 }
 
-// Vložení rezervace do databáze
+// Vložení rezervace do databázee
 $reserveSql = "INSERT INTO reservations (id, user_id, item_id, quantity, reserved_at, hour_id, day_id) VALUES (null, ?, ?, ?, NOW(), ?, ?)";
 $stmt = $conn->prepare($reserveSql);
 $stmt->bind_param("iiiii", $user_id, $item_id, $quantity, $hour_id, $day_id);
