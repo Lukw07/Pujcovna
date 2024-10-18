@@ -1,0 +1,237 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100%;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 15px 20px;
+    color: #333333;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    flex-wrap: wrap; /* Umožní wrap pro lepší umístění */
+}
+
+header img {
+    height: 50px;
+    margin-right: 20px;
+}
+
+header .username {
+    margin-right: auto;
+    font-size: 16px;
+    color: #333333;
+    font-weight: 900;
+}
+
+header .logout-button {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    background-color: #ff512f;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+header .logout-button:hover {
+    background-color: #e63819;
+}
+
+.search {
+    margin-top: 10px;
+    position: relative;
+    right: 2%;
+}
+
+option {
+    transition: 0.3s;
+}
+
+select { 
+    font-weight: bold;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 100px;
+    width: 100%;
+    max-width: 1900px;
+    max-height: 1900px;
+}
+
+.highlight-current-hour {
+    z-index: 2;
+    background-color: rgba(0, 153, 255, 0.361) !important;
+    position: relative;
+}
+
+.reservation-details {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1000;
+    max-width: 300px; /* Šířka bubliny */
+    border-radius: 4px; /* Zaoblení rohů */
+    font-size: 16px; /* Velikost písma */
+    white-space: nowrap; /* Zabrání zalomení textu */
+    text-align: left; /* Zarovnání textu vlevo */
+}
+
+#my-reservations, #all-reservations, #reservation-history {
+    display: none;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    color: #333333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #666666;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+table {
+    font-weight: bold;
+    background: #e1e2e2;
+    margin: 0px;
+    width: 100%;
+    font-size: 18px;
+    border-collapse: collapse;
+    table-layout: fixed; /* Každý sloupec bude mít stejnou šířku */
+}
+
+td, th {
+    font-weight: bold;
+    height: 101px;
+    padding: 20px; /* Zvýšeno padding pro větší buňky */
+    text-align: center;
+    vertical-align: middle;
+    background: #e1e2e2;
+}
+
+th {
+    background: #e1e2e2;
+    height: 30px !important;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.available {
+    background-color: #a4ff70;
+}
+
+.partial {
+    background-color: #ffcb70;
+}
+
+.unavailable {
+    background-color: #ff7070;
+}
+
+.loader {
+    display: none;
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    header img {
+        margin-bottom: 10px;
+    }
+
+    header .username {
+        margin-right: 0;
+        text-align: left;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    header .logout-button {
+        align-self: flex-start;
+        margin-left: 0;
+    }
+
+    .container {
+        padding: 20px; /* Zmenšené paddingy pro menší obrazovky */
+        margin-top: 80px; /* Úprava pro zajištění dostatečného místa pod hlavičkou */
+    }
+
+    table {
+        font-size: 16px; /* Zmenšení velikosti písma pro menší obrazovky */
+    }
+
+    td, th {
+        height: auto; /* Přizpůsobení výšky buněk */
+        padding: 10px; /* Zmenšení paddingu pro menší obrazovky */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px; /* Zmenšení velikosti písma nadpisu */
+    }
+
+    p {
+        font-size: 16px; /* Zmenšení velikosti písma odstavců */
+    }
+
+    header .logout-button {
+        padding: 8px 15px; /* Zmenšení paddingu tlačítka */
+    }
+}
